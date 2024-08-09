@@ -13,18 +13,14 @@ public class Main {
 
     public static void checkYear(int year) {
         System.out.println("Определить високосный год");
-        if (year > 1584) {
-            if (year % 400 == 0) {
-                System.out.println(year + " год является високосным");
-            } else if (year % 4 == 0 && year % 100 != 0) {
-                System.out.println(year + " год является високосным");
-            } else if (year % 100 == 0) {
-                System.out.println(year + " год не является високосным");
-            } else if (year % 4 != 0) {
-                System.out.println(year + " год не является високосным");
-            }
-            System.out.println();
+        if (year % 400 == 0 && year % 4 == 0 && year % 100 != 0) {
+            System.out.println(year + " год является високосным");
+        } else if (year % 4 == 0 && year % 100 != 0) {
+            System.out.println(year + " год является високосным");
+        } else {
+            System.out.println(year + " год не является високосным");
         }
+        System.out.println();
     }
 
     public static void printOsAndVersionApp(byte clientOS, int clientDeviceYear) {
